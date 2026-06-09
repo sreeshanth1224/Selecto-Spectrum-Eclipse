@@ -2,7 +2,7 @@
 #include <string>
 #include <cctype>
 #include <fstream>
-
+#include <limits>
 using namespace std;
 
 // Hidden Traits
@@ -690,9 +690,6 @@ int main()
              corruption <= 2 &&
              goodRelations >= 2)
     {
-        ofstream file("endings.txt", ios::app);
-        file << "THE HERO\n";
-        file.close();
 
         cout << "THE HERO\n\n";
         cout << "You become a beacon of hope.\n";
@@ -720,7 +717,14 @@ int main()
     cout << "Corruption: " << corruption << endl;
     cout << "Logic: " << logicTrait << endl;
 
-    cout << "\nThank you for playing Selecto Spectrum: Eclipse!\n";
+    ofstream file("endings.txt", ios::app);
 
+    /* KEEP ALL YOUR EXISTING FILE CODE HERE */
+
+    file.close();
+    cout << "\nThank you for playing Selecto Spectrum: Eclipse!\n";
+    cout << "\nPress Enter to exit...";
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    cin.get();
     return 0;
 }
