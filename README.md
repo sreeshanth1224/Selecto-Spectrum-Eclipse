@@ -1,4 +1,4 @@
-# 🌌 Selecto Spectrum: Eclipse
+# 🌌 Selecto Spectrum: Eclipse <h1>BEteee</h1>
 
 > *"Who decides what the world becomes?"*
 
